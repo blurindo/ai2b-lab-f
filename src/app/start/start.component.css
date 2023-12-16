@@ -1,0 +1,30 @@
+main {
+    padding: 1em;
+  }
+  
+  .unauthorized > form {
+    max-width: 300px;
+    border: 1px solid black;
+    padding: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+  
+  .unauthorized form div {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin-bottom: 1em;
+  }
+  
+  .unauthorized form div input[type='submit'] {
+    grid-column-start: 2;
+  }
+
+  .unauthorized form .error {
+    grid-column: span 2;
+    background-color: #ff6f6f;
+    padding: 0.5em;
+    border-radius: 8px;
+    color: white;
+    text-align: center;
+  }

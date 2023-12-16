@@ -1,0 +1,34 @@
+### Authentication - provide username and password to receive a token
+
+# Description Allows to log in as admin.
+# Body: username & password
+
+# Users:
+# - admin:4321
+# - user:1234
+# - janek:1234
+# - franek:1234
+
+# Use the token from response in http-client.env.json file to test other endpoints
+
+POST https://labjwt.zecer.wi.zut.edu.pl/api/auth/login
+Content-Type: application/json
+
+{
+  "username":"admin",
+  "password":"4321"
+}
+
+
+### GET list of all API users (access restricted)
+GET https://labjwt.zecer.wi.zut.edu.pl/api/users
+Accept: application/json
+Authorization: Bearer {{token}}
+
+### GET list of all items in the API (access restricted)
+GET https://labjwt.zecer.wi.zut.edu.pl/api/items
+Accept: application/json
+Authorization: Bearer {{token}}
+
+
+
